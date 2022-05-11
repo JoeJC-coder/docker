@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article id{% endblock %}
+
+{% block body %}
+        
+        <div class="card" style="width: 18rem;">
+            <img src={{ articles.image }} class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ articles.title }}</h5>
+            <p class="card-text">{{ articles.content }}</p>
+            <a href={{path('app_article')}} class="btn btn-primary">retour</a>
+            </div>
+        </div>
+        
+{% endblock %}

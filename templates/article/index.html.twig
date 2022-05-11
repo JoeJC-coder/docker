@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article{% endblock %}
+
+{% block body %}
+<div class="row">
+    {% for article in articles %}
+    
+        <div class="card" style="width: 18rem;">
+            <img src={{ article.image }} class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ article.title }}</h5>
+            <p class="card-text">{{ article.content }}</p>
+            <a href="{{path('app_article_id', {'id': article.id})}}" class="btn btn-primary">Voir plus</a>
+            </div>
+        </div>
+    
+    {% endfor %}
+</div>
+{% endblock %}
